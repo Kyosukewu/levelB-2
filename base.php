@@ -6,7 +6,7 @@ session_start();
 /**判斷瀏灠人次 */
 
 $Total=new DB('total');
-
+$Mem=new DB('mem');
 $chk=$Total->find(['date'=>date("Y-m-d")]);
 
 if(empty($chk) && empty($_SESSION['total'])){
