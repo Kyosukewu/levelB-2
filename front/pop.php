@@ -19,9 +19,9 @@
         ?>
             <tr>
                 <td class="header" style="cursor: pointer;" id="t<?= $news['id']; ?>"><?= $news['title']; ?></td>
-                <td>
+                <td style="position: relative;">
                     <span class="title"><?= mb_substr($news['text'], 0, 30, 'utf8'); ?>...</span>
-                    <span class="text" style="display: none;"><?= nl2br($news['text']); ?></span>
+                    <span class="text" style="display: none; background:rgba(51,51,51,0.8); color:#FFF; min-height:100px; width:300px; position:absolute;z-index:9999; overflow:auto;"><h3><?=$typeStr[$news['type']];?></h3><?= nl2br($news['text']); ?></span>
                 </td>
                 <td>
                 <span id="vie<?=$news['id'];?>"><?=$news['good'];?></span>
@@ -63,8 +63,7 @@
     </div>
 </fieldset>
 <script>
-    $(".header").on("click",function(e){
-        $(this).next('td').children('.title').toggle();
+    $(".header").hover(function(e){
         $(this).next('td').children('.text').toggle();
     })
 </script>

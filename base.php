@@ -9,6 +9,15 @@ $Total=new DB('total');
 $Mem=new DB('mem');
 $News=new DB('news');
 $Log=new DB('log');
+
+$typeStr=[
+    1=>"健康新知",
+    2=>"菸害防制",
+    3=>"癌症防治",
+    4=>"慢性病防制"
+];
+
+
 $chk=$Total->find(['date'=>date("Y-m-d")]);
 
 if(empty($chk) && empty($_SESSION['total'])){
