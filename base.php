@@ -7,6 +7,7 @@ session_start();
 
 $Total=new DB('total');
 $Mem=new DB('mem');
+$News=new DB('news');
 $chk=$Total->find(['date'=>date("Y-m-d")]);
 
 if(empty($chk) && empty($_SESSION['total'])){
