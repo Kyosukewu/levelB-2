@@ -18,7 +18,7 @@
             <td><?=$que['text'];?></td>
             <td style="text-align:center;"><?=$que['count'];?></td>
             <td style="text-align:center;">
-                <a href="?do=res">結果</a>
+                <a href="?do=res&id=<?=$que['id'];?>">結果</a>
             </td>
             <td style='text-align:center;'>
         <?php
